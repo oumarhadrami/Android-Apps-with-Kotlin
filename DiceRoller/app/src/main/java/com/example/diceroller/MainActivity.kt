@@ -3,18 +3,38 @@ package com.example.diceroller
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
+import android.widget.ImageView
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    lateinit var resultImage: ImageView
+
+        override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val rollButton: Button = findViewById(R.id.roll_button)
-        var resultText: TextView = findViewById(R.id.result_text)
+        resultImage = findViewById(R.id.result_image)
 
-        rollButton.setOnClickListener{ resultText.text = "65" }
+        rollButton.setOnClickListener{
+            rollDice()
+        }
 
+    }
+
+    private fun rollDice() {
+        var result: Int = Random().nextInt(6) + 1
+        var drawableResource  = when(result){
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            6 -> R.drawable.dice_6
+            else -> R.drawable.empty_dice
+        }
+
+        resultImage.setImageResource(drawableResource)
     }
 }
