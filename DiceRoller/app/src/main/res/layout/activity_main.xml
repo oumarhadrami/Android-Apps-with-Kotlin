@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/result_image"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/empty_dice"
+            app:srcCompat="@drawable/empty_dice"
             tools:src="@drawable/dice_1"/>
 
     <Button
