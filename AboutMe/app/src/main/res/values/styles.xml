@@ -7,5 +7,12 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="NameStyle">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:padding">@dimen/small_padding</item>
+        <item name="android:layout_margin">@dimen/margin_from_layout</item>
+        <item name="android:textSize">@dimen/medium_text</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
 
 </resources>
