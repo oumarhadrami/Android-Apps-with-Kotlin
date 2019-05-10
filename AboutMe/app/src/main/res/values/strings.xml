@@ -3,7 +3,7 @@
     <string name="name">Mohamed El Hadramy Oumar</string>
     <string name="yellow_star">Yellow Star</string>
     <string name="bio">
-        \n\n Hi I\'m Mohamed El Hadramy Oumar
+        Hi I\'m Mohamed El Hadramy Oumar
         \n\n I am from Mauritania. I did my bachelor in Computer Science, Mathematics, and Statistics. I did my Master in Mathematics.
         \n\n I enjoy playing football, as well as watching football matches.
         \n\n I love Android and Kotlin :)
@@ -12,8 +12,9 @@
         \n\n I enjoy reading books and watching worthwhile documentaries.
         \n\n I\'m looking forward to watch spider man far from home movie that\'s gonna be released soon.
         \n\n That\'s all about me :D
-        \n\n Have a great day.
+        \n\n Have a great day.\n
 
 
     </string>
+    <string name="what_is_your_nickname">What is your nickname?</string>
 </resources>
