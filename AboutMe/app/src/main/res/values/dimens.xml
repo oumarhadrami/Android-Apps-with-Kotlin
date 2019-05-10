@@ -4,4 +4,5 @@
     <dimen name="small_padding">8dp</dimen>
     <dimen name="margin_from_layout">16dp</dimen>
     <dimen name="padding_start">16dp</dimen>
+    <dimen name="eight_dp_margin">8dp</dimen>
 </resources>
