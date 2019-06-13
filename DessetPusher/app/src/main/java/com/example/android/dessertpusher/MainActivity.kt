@@ -156,4 +156,26 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         super.onStart()
         Timber.i("Activity Started")
     }
+
+    override fun onResume() {
+        super.onResume()
+        Timber.i("Activity Resumed")
+
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Timber.i("Activity Paused")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Timber.i("Activity Stopped")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Timber.i("Activity Destroyed")
+    }
 }
