@@ -75,9 +75,11 @@ class GameFragment : Fragment() {
                 gameFinished()
                 viewModel.onGameFinishedCOmplete()
             }
-        }
+        })
 
-        )
+        viewModel.timeLeft.observe(this, Observer { newTimeLeft ->
+            binding.timerText.text = newTimeLeft.toString()
+        })
 
         return binding.root
 
