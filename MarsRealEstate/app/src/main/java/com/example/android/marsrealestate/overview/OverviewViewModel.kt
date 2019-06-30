@@ -40,11 +40,11 @@ class OverviewViewModel : ViewModel() {
         get() = _status
 
 
-    // Live data for image
-    private val _property = MutableLiveData<MarsProperty>()
+    // Live data for images
+    private val _properties = MutableLiveData<List<MarsProperty>>()
 
-    val property: LiveData<MarsProperty>
-        get() = _property
+    val properties: LiveData<List<MarsProperty>>
+        get() = _properties
 
     // OverviewViewModel job, scope
     private var viewModelJob = Job()
@@ -68,7 +68,7 @@ class OverviewViewModel : ViewModel() {
             try {
                 val listResult = getPropertiesDeferred.await()
                 if (listResult?.size > 0) {
-                    _property.value = listResult[0]
+                    _properties.value = listResult
                 }
             }
             catch (t : Throwable){
