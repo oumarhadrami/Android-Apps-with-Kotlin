@@ -6,15 +6,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Main2Activity" style="@style/textViewStyle">
-
     <TextView
-            android:text="Hello Hadramy"
+            android:text="Hello Hadramy How are you?"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView4"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            style="@style/textViewStyle"/>
+            android:id="@+id/textView6" style="@style/textViewStyle"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView7" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@+id/barrier13"
+            android:layout_marginStart="20dp" app:layout_constraintVertical_bias="0.509"/>
+    <androidx.constraintlayout.widget.Barrier android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                              android:id="@+id/barrier13" app:barrierDirection="end"
+                                              app:constraint_referenced_ids="textView7,textView6"
+                                              tools:layout_editor_absoluteX="411dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
