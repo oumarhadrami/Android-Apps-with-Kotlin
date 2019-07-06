@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">App1Practice</string>
+    <string name="Welcome">Welcome</string>
+    <string name="random">It is said that song composers of the past used dummy texts as lyrics when writing more
+        frequently than others - which creates a distinct visual impression.
+    </string>
+    <string name="random2">Android Studio supports a variety of XML attributes in</string>
 </resources>
