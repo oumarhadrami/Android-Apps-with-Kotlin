@@ -7,16 +7,6 @@
     // Use viewModelScope from lifecycle-viewmodel-ktx
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha03"
 
-    // Navigation
-    implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0"
-    implementation "android.arch.navigation:navigation-ui-ktx:1.0.0"
-       <fragment android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-		 app:navGraph="@navigation/navigation"
-		 android:id="@+id/myNavHostFragment"
-   		 app:defaultNavHost="true"
-                 android:name="androidx.navigation.fragment.NavHostFragment"/>
-
 
     // Moshi
     implementation "com.squareup.moshi:moshi:1.8.0"
@@ -48,7 +38,15 @@
         enabled = true
     }
 
-
+    // Navigation
+    implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0"
+    implementation "android.arch.navigation:navigation-ui-ktx:1.0.0"
+       <fragment android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+		 app:navGraph="@navigation/navigation"
+		 android:id="@+id/myNavHostFragment"
+   		 app:defaultNavHost="true"
+                 android:name="androidx.navigation.fragment.NavHostFragment"/>
     // SafeArgs
     classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0"
     // Adding the apply plugin statement for safeargs

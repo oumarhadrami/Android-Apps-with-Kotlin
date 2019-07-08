@@ -18,7 +18,7 @@ class FirstFragment : Fragment() {
         val binding : FragmentFirstBinding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_first, container, false)
         binding.button.setOnClickListener {
-            it.findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
+            it.findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment("Your argument has been passed!"))
         }
         return binding.root
 
