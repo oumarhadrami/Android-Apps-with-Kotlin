@@ -1,0 +1,22 @@
+// SafeArgs code
+	//In Fragment 1
+	binding.button.setOnClickListener {
+            it.findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment("Your argument has been passed!"))
+        }
+	// In Fragment 2
+	var args = SecondFragmentArgs.fromBundle(arguments!!)
+        Toast.makeText(context, args.message,Toast.LENGTH_LONG).show()
+
+
+
+// DataBinding in Fragment
+	val binding : FragmentFirstBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_second,container,false)
+	return binding.root
+
+
+
+
+// DataBinding in Activity
+	private lateinit var binding : ActivityMainBinding
+
+	binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
