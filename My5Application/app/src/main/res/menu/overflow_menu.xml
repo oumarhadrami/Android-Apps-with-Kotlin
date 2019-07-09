@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Third Frag" android:id="@+id/thirdFragment"/>
+    <item android:title="About Frag" android:id="@+id/aboutFragment"/>
+    <item
+            android:id="@+id/app_bar_search"
+            android:icon="@drawable/ic_search_black_24dp"
+            app:showAsAction="ifRoom"
+            android:title="Search" app:actionViewClass="android.widget.SearchView"/>
+</menu>

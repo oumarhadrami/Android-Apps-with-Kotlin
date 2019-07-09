@@ -6,14 +6,20 @@
 
     <fragment android:id="@+id/firstFragment" android:name="com.example.my5application.FirstFragment"
               android:label="fragment_first" tools:layout="@layout/fragment_first">
-        <action android:id="@+id/action_firstFragment_to_secondFragment" app:destination="@+id/secondFragment"/>
+        <action android:id="@+id/action_firstFragment_to_secondFragment" app:destination="@+id/aboutFragment"
+                app:enterAnim="@anim/slide_in_left" app:exitAnim="@anim/slide_out_right"
+                app:popEnterAnim="@anim/slide_in_right" app:popExitAnim="@anim/slide_out_left"/>
     </fragment>
-    <fragment android:id="@+id/secondFragment" android:name="com.example.my5application.SecondFragment"
+    <fragment android:id="@+id/aboutFragment" android:name="com.example.my5application.SecondFragment"
               android:label="fragment_second" tools:layout="@layout/fragment_second">
         <argument android:name="message" app:argType="string"/>
         <action android:id="@+id/action_secondFragment_to_thirdFragment" app:destination="@id/thirdFragment"/>
-        <action android:id="@+id/action_secondFragment_to_thirdFragment2" app:destination="@id/thirdFragment"/>
+        <action android:id="@+id/action_secondFragment_to_thirdFragment2" app:destination="@id/thirdFragment"
+                app:enterAnim="@anim/slide_in_left" app:exitAnim="@anim/slide_out_right"
+                app:popEnterAnim="@anim/slide_in_right" app:popExitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment android:id="@+id/thirdFragment" android:name="com.example.my5application.ThirdFragment"
               android:label="fragment_third" tools:layout="@layout/fragment_third"/>
+    <fragment android:id="@+id/aboutFragment" android:name="com.example.my5application.AboutFragment"
+              android:label="fragment_about" tools:layout="@layout/fragment_about"/>
 </navigation>
