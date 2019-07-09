@@ -11,5 +11,9 @@
     <fragment android:id="@+id/secondFragment" android:name="com.example.my5application.SecondFragment"
               android:label="fragment_second" tools:layout="@layout/fragment_second">
         <argument android:name="message" app:argType="string"/>
+        <action android:id="@+id/action_secondFragment_to_thirdFragment" app:destination="@id/thirdFragment"/>
+        <action android:id="@+id/action_secondFragment_to_thirdFragment2" app:destination="@id/thirdFragment"/>
     </fragment>
+    <fragment android:id="@+id/thirdFragment" android:name="com.example.my5application.ThirdFragment"
+              android:label="fragment_third" tools:layout="@layout/fragment_third"/>
 </navigation>

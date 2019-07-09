@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.my5application.databinding.FragmentSecondBinding
 
 
@@ -21,6 +22,9 @@ class SecondFragment : Fragment() {
 
         var args = SecondFragmentArgs.fromBundle(arguments!!)
         Toast.makeText(context, args.message,Toast.LENGTH_LONG).show()
+        binding.button.setOnClickListener {
+            it.findNavController().navigate(SecondFragmentDirections.actionSecondFragmentToThirdFragment())
+        }
 
         return binding.root
     }
