@@ -36,10 +36,10 @@ class FirstFragment : Fragment() {
         // reference to viewModel
         viewModel = ViewModelProviders.of(this).get(FirstViewModel::class.java)
         binding.viewmodel = viewModel
+        // link databinding to livedata
+        binding.lifecycleOwner = this
 
-        viewModel.score.observe(this, Observer { newScore ->
-            binding.score.text = newScore.toString()
-        })
+
 
         return binding.root
     }
