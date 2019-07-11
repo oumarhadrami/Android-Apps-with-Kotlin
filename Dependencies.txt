@@ -56,6 +56,11 @@
     apply plugin: 'kotlin-kapt'
     apply plugin: 'androidx.navigation.safeargs'
 
+
     // Vector Drawables to be added after android{ defaultConfig{ ..
     vectorDrawables.useSupportLibrary = true
+
+
+    // ViewModel
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0' 
 

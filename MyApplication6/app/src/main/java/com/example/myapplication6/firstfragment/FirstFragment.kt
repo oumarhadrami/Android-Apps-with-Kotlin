@@ -1,4 +1,4 @@
-package com.example.myapplication6
+package com.example.myapplication6.firstfragment
 
 
 import android.os.Bundle
@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import com.example.myapplication6.FirstFragmentDirections
+import com.example.myapplication6.R
 import com.example.myapplication6.databinding.FragmentFirstBinding
 
 
@@ -16,10 +18,15 @@ class FirstFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val binding : FragmentFirstBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_first,container,false)
+        val binding : FragmentFirstBinding = DataBindingUtil.inflate(inflater,
+            R.layout.fragment_first,container,false)
 
         binding.button.setOnClickListener {
-            it.findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(6))
+            it.findNavController().navigate(
+                FirstFragmentDirections.actionFirstFragmentToSecondFragment(
+                    6
+                )
+            )
         }
 
         return binding.root
