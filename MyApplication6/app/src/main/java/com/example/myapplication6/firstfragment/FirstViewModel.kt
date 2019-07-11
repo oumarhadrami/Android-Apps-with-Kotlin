@@ -11,6 +11,9 @@ class FirstViewModel : ViewModel() {
     val score : LiveData<Int>
     get() = _score
 
+    init {
+        _score.value = 0
+    }
 
     override fun onCleared() {
         super.onCleared()

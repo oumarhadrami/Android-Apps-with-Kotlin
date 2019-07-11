@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import com.example.myapplication6.firstfragment.FirstFragmentDirections
@@ -34,6 +35,11 @@ class FirstFragment : Fragment() {
 
         // reference to viewModel
         viewModel = ViewModelProviders.of(this).get(FirstViewModel::class.java)
+        binding.viewmodel = viewModel
+
+        viewModel.score.observe(this, Observer { newScore ->
+            binding.score.text = newScore.toString()
+        })
 
         return binding.root
     }
