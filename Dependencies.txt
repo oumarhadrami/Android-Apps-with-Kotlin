@@ -34,8 +34,11 @@
 
 
     // DataBinding
-    dataBinding {
-        enabled = true
+    android {
+    ...
+      dataBinding {
+       enabled true
+      }
     }
 
     // Navigation
@@ -52,4 +55,7 @@
     // Adding the apply plugin statement for safeargs
     apply plugin: 'kotlin-kapt'
     apply plugin: 'androidx.navigation.safeargs'
+
+    // Vector Drawables to be added after android{ defaultConfig{ ..
+    vectorDrawables.useSupportLibrary = true
 
