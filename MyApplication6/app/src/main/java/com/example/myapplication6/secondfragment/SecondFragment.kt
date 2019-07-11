@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.myapplication6.R
-import com.example.myapplication6.SecondFragmentArgs
+import com.example.myapplication6.secondfragment.SecondFragmentArgs
 import com.example.myapplication6.databinding.FragmentSecondBinding
 
 
