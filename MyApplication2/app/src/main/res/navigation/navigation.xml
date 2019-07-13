@@ -9,7 +9,9 @@
         <action android:id="@+id/action_blankFragment_to_emptyFragment" app:destination="@id/emptyFragment"/>
     </fragment>
     <fragment android:id="@+id/emptyFragment" android:name="com.example.myapplication.screens.empty.EmptyFragment"
-              android:label="fragment_empty" tools:layout="@layout/fragment_empty"/>
+              android:label="fragment_empty" tools:layout="@layout/fragment_empty">
+        <argument android:name="the_truth" app:argType="boolean"/>
+    </fragment>
     <fragment android:id="@+id/crazyFragment" android:name="com.example.myapplication.screens.crazy.CrazyFragment"
               android:label="fragment_crazy" tools:layout="@layout/fragment_crazy"/>
 </navigation>

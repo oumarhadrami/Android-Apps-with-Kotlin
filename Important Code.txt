@@ -20,3 +20,24 @@
 	private lateinit var binding : ActivityMainBinding
 
 	binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+
+
+// Navigate from menu to fragment
+	R.id.aboutFragment -> {
+                navController.navigate(R.id.aboutFragment)
+                true}
+
+// setUpNavigation
+	private lateinit var navController : NavController
+
+	navController = Navigation.findNavController(this, R.id.myNavHostFragment)
+
+// Up button
+	NavigationUI.setupActionBarWithNavController(this, navController)
+	
+	override fun onSupportNavigateUp(): Boolean {
+        val navController = this.findNavController(R.id.myNavHostFragment)
+        return navController.navigateUp()
+    	}
+
+//
