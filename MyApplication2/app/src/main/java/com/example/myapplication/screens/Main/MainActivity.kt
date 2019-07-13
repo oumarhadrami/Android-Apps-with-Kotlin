@@ -1,4 +1,4 @@
-package com.example.myapplication.screens
+package com.example.myapplication.screens.Main
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
