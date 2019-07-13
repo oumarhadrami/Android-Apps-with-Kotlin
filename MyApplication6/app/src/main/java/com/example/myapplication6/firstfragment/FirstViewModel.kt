@@ -16,8 +16,14 @@ class FirstViewModel : ViewModel() {
         score.toString()
     })
 
+
+    private var _evenGameWon = MutableLiveData<Boolean>()
+    val eventGameWon : LiveData<Boolean>
+    get() = _evenGameWon
+
     init {
         _score.value = 0
+        _evenGameWon.value = false
     }
 
     override fun onCleared() {
@@ -26,6 +32,16 @@ class FirstViewModel : ViewModel() {
     }
 
     fun updateScore(){
-        _score.value = (_score.value)?.plus(1)
+        if (_score.value == 10){
+            _evenGameWon.value = true
+        }
+        else{
+            _score.value = (_score.value)?.plus(1)
+        }
+    }
+
+
+    fun onGameFinish(){
+        _evenGameWon.value = false
     }
 }
