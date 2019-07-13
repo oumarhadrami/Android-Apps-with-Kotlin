@@ -2,7 +2,7 @@
       xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:tools="http://schemas.android.com/tools"
       tools:context="com.example.myapplication.screens.MainActivity">
-    <item android:id="@+id/action_crazy"
+    <item android:id="@+id/crazyFragment"
           android:title="@string/action_settings"
           android:orderInCategory="100"
           android:icon="@drawable/ic_settings_turcoise_24dp"
