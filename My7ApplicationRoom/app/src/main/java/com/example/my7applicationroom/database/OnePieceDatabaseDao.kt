@@ -9,15 +9,15 @@ interface OnePieceDatabaseDao {
 
     // insert a character
     @Insert
-    fun insert(character: OnePiece)
+    fun insert(character: OnePieceCharacter)
 
     // update a character
     @Update
-    fun update(character: OnePiece)
+    fun update(character: OnePieceCharacter)
 
     //get back one character
     @Query("SELECT * FROM one_piece_characters where characterId = :id")
-    fun get(id : Long) : OnePiece
+    fun get(id : Long) : OnePieceCharacter?
 
     // delete all characters
     @Query("delete from one_piece_characters")
@@ -25,5 +25,8 @@ interface OnePieceDatabaseDao {
 
     // get back all characters as livedata
     @Query("select * from one_piece_characters order by characterId desc")
-    fun getAllCharacters() : LiveData<List<OnePiece>>
+    fun getAllCharacters() : LiveData<List<OnePieceCharacter>>
+
+    @Query("select * from one_piece_characters order by characterId desc limit 1")
+    fun getTheNewCharacter() : OnePieceCharacter?
 }

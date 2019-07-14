@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "one_piece_characters")
-data class OnePiece(
+data class OnePieceCharacter(
 
     @PrimaryKey(autoGenerate = true)
     var characterId : Long = 0L,
