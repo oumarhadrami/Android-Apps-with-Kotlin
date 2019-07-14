@@ -27,6 +27,11 @@
                 navController.navigate(R.id.aboutFragment)
                 true}
 
+//Navigate from Fragment to another Fragment
+	
+	it.findNavController().navigate(
+                FirstFragmentDirections.actionFirstFragmentToSecondFragment()	
+
 // setUpNavigation
 	private lateinit var navController : NavController
 
@@ -40,4 +45,4 @@
         return navController.navigateUp()
     	}
 
-//
+// 

@@ -6,7 +6,7 @@
     <string name="first_fragment">Blank Fragment</string>
     <string name="second_fragment">Empty Fragment</string>
     <string name="about_fragment">Crazy Fragment</string>
-    <string name="update_score">Update Word</string>
+    <string name="update_score">Update Score</string>
     <string name="score_format">Current Score: \"%s\"</string>
     <string name="vide_fragment">Vide Fragment</string>
 </resources>
