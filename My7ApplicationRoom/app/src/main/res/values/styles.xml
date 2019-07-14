@@ -24,4 +24,8 @@
         <item name="android:textColor">@color/design_default_color_on_secondary</item>
     </style>
 
+    <style name="AppTitle" parent="AppTheme">
+        <item name="colorOnPrimary">@android:color/darker_gray</item>
+    </style>
+
 </resources>
