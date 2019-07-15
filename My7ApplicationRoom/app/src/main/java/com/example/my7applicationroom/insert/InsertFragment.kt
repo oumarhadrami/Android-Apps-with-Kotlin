@@ -31,6 +31,12 @@ class InsertFragment : Fragment() {
 
         binding.lifecycleOwner = this
 
+        binding.button.setOnClickListener {
+            val name = binding.textInputEditText3.text.toString()
+            val devilFruitType = binding.textInputEditText4.text.toString()
+            viewModel.insertCharacter(name,devilFruitType)
+        }
+
         return binding.root
     }
 

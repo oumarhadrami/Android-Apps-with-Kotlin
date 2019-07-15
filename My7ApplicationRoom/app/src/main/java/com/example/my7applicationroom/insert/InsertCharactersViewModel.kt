@@ -22,11 +22,11 @@ class InsertCharactersViewModel(val database: OnePieceDatabaseDao,
 
     private var uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
-    private var character = MutableLiveData<OnePieceCharacter?>()
 
-    fun insertCharacter(){
+
+    fun insertCharacter(name : String, devilFruitType : String){
         uiScope.launch {
-            val newCharacter = OnePieceCharacter()
+            val newCharacter = OnePieceCharacter(characterName = name, devilFruitType = devilFruitType)
             insert(newCharacter)
         }
     }
