@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/navigation" app:startDestination="@id/charactersFragment">
-
-    <fragment android:id="@+id/charactersFragment" android:name="com.example.my7applicationroom.characters.CharactersFragment"
+            android:id="@+id/navigation" app:startDestination="@id/insertFragment">
+    <fragment android:id="@+id/insertFragment" android:name="com.example.my7applicationroom.InsertFragment"
+              android:label="InsertFragment">
+        <action android:id="@+id/action_insertFragment_to_charactersFragment" app:destination="@id/charactersFragment"/>
+    </fragment>
+    <fragment android:id="@+id/charactersFragment"
+              android:name="com.example.my7applicationroom.characters.CharactersFragment"
               android:label="CharactersFragment"/>
 </navigation>
