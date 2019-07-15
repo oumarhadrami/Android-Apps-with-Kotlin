@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/navigation" app:startDestination="@id/insertFragment">
-    <fragment android:id="@+id/insertFragment" android:name="com.example.my7applicationroom.InsertFragment"
+    <fragment android:id="@+id/insertFragment" android:name="com.example.my7applicationroom.insert.InsertFragment"
               android:label="InsertFragment">
         <action android:id="@+id/action_insertFragment_to_charactersFragment" app:destination="@id/charactersFragment"/>
     </fragment>
