@@ -30,7 +30,7 @@
 //Navigate from Fragment to another Fragment
 	
 	it.findNavController().navigate(
-                FirstFragmentDirections.actionFirstFragmentToSecondFragment()	
+                FirstFragmentDirections.actionFirstFragmentToSecondFragment())
 
 // setUpNavigation
 	private lateinit var navController : NavController

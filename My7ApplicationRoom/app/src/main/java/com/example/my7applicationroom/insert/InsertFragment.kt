@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.findNavController
 import com.example.my7applicationroom.R
 import com.example.my7applicationroom.database.OnePieceDatabase
 import com.example.my7applicationroom.databinding.FragmentInsertBinding
@@ -35,6 +36,7 @@ class InsertFragment : Fragment() {
             val name = binding.textInputEditText3.text.toString()
             val devilFruitType = binding.textInputEditText4.text.toString()
             viewModel.insertCharacter(name,devilFruitType)
+            it.findNavController().navigate(InsertFragmentDirections.actionInsertFragmentToCharactersFragment())
         }
 
         return binding.root

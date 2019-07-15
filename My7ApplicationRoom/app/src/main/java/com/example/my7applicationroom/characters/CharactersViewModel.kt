@@ -22,10 +22,11 @@ class CharactersViewModel(val database: OnePieceDatabaseDao,
 
     private val characters = database.getAllCharacters()
 
-    val charactersString = Transformations.map(characters) {characters ->
+    /*val charactersString = Transformations.map(characters) { characters ->
         ConvertToStrings(characters, application.resources)
-    }
-
+    }!!
+*/
+    val charactersL = characters.toString()
 
 
 

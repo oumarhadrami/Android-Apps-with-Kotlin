@@ -13,4 +13,5 @@
     <string name="title"><![CDATA[<h3>HERE IS YOUR CHARACTERS LIST</h3>]]></string>
     <string name="name"><![CDATA[<b>Name:</b>]]></string>
     <string name="devil_fruit_type"><![CDATA[<b>Devil Fruit Type:</b>]]></string>
+    <string name="go_to_insert">Go to Insert</string>
 </resources>
