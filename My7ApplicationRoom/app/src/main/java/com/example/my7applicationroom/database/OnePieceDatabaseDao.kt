@@ -15,7 +15,7 @@ interface OnePieceDatabaseDao {
     @Update
     fun update(character: OnePieceCharacter)
 
-    //get back one character
+    //get back one specific character
     @Query("SELECT * FROM one_piece_characters where characterId = :id")
     fun get(id : Long) : OnePieceCharacter?
 
@@ -27,6 +27,7 @@ interface OnePieceDatabaseDao {
     @Query("select * from one_piece_characters order by characterId desc")
     fun getAllCharacters() : LiveData<List<OnePieceCharacter>>
 
+    // get back the latest added character
     @Query("select * from one_piece_characters order by characterId desc limit 1")
     fun getTheNewCharacter() : OnePieceCharacter?
 }
