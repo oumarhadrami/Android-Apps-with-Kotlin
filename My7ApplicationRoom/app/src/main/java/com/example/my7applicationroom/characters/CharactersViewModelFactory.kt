@@ -7,7 +7,8 @@ import com.example.my7applicationroom.database.OnePieceDatabaseDao
 
 class CharactersViewModelFactory(
     private val dataSource: OnePieceDatabaseDao,
-    private val application: Application) : ViewModelProvider.Factory {
+    private val application: Application
+) : ViewModelProvider.Factory {
 
     @Suppress("unchecked_cast")
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
