@@ -10,5 +10,8 @@
     </fragment>
     <fragment android:id="@+id/charactersFragment"
               android:name="com.example.my8application.characters.CharactersFragment"
-              android:label="CharactersFragment"/>
+              android:label="CharactersFragment">
+        <action android:id="@+id/action_charactersFragment_to_insertFragmentFragment"
+                app:destination="@id/insertFragmentFragment"/>
+    </fragment>
 </navigation>
