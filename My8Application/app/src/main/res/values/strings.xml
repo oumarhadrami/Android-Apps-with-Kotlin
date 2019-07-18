@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My7ApplicationRoom</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="clear">Clear</string>
+    <string name="enter_character_name">Enter character name..</string>
+    <string name="enter_devil_fruit_type">Enter devil fruit type..</string>
+    <string name="insert_a_new_charater">Insert a new charater!</string>
+    <string name="insert">Insert</string>
+    <string name="go_to_insert">Go to Insert</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
