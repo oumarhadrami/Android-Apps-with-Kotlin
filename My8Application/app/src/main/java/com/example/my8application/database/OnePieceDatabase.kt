@@ -1,4 +1,4 @@
-package com.example.my7applicationroom.database
+package com.example.my8application.database
 
 import android.content.Context
 import androidx.room.Database
