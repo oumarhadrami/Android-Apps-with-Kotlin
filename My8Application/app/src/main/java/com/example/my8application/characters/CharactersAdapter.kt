@@ -29,8 +29,8 @@ class CharactersAdapter : ListAdapter<OnePieceCharacter,
     class ViewHolder private constructor (val binding: CharacterItemBinding) : RecyclerView.ViewHolder(binding.root){
 
         fun bind(item: OnePieceCharacter) {
-          binding.textView3.text = item.characterName
-          binding.textView2.text = item.devilFruitType
+            binding.character = item
+            binding.executePendingBindings()
 
         }
 
