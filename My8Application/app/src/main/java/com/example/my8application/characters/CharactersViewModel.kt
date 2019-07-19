@@ -12,6 +12,7 @@ class CharactersViewModel(val database: OnePieceDatabaseDao,
 ) : AndroidViewModel(application) {
 
     private var viewModelJob = Job()
+    val characters = database.getAllCharacters()
 
     override fun onCleared() {
         super.onCleared()
@@ -20,7 +21,7 @@ class CharactersViewModel(val database: OnePieceDatabaseDao,
 
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
-    private val characters = database.getAllCharacters()
+
 
 
     fun clearAll(){
