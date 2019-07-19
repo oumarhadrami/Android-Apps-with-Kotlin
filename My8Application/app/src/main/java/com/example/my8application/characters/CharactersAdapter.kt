@@ -2,20 +2,17 @@ package com.example.my8application.characters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.my8application.database.OnePieceCharacter
 import com.example.my8application.databinding.CharacterItemBinding
 
-class CharactersAdapter : ListAdapter<OnePieceCharacter,
+class CharactersAdapter(val clickListener : OnePieceCharacterListener) : ListAdapter<OnePieceCharacter,
         CharactersAdapter.ViewHolder>(CharactersDiffCallback()) {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = getItem(position)
-
-        holder.bind(item)
+        holder.bind(getItem(position), clickListener)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -28,8 +25,12 @@ class CharactersAdapter : ListAdapter<OnePieceCharacter,
 
     class ViewHolder private constructor (val binding: CharacterItemBinding) : RecyclerView.ViewHolder(binding.root){
 
-        fun bind(item: OnePieceCharacter) {
+        fun bind(
+            item: OnePieceCharacter,
+            clickListener: OnePieceCharacterListener
+        ) {
             binding.character = item
+            binding.clickListener = clickListener
             binding.executePendingBindings()
 
         }
@@ -55,4 +56,9 @@ class CharactersDiffCallback : DiffUtil.ItemCallback<OnePieceCharacter>() {
     override fun areContentsTheSame(oldItem: OnePieceCharacter, newItem: OnePieceCharacter): Boolean {
         return oldItem == newItem
     }
+}
+
+
+class OnePieceCharacterListener(val clickListener: (characterId : Long) -> Unit){
+    fun onClick(character : OnePieceCharacter) = clickListener(character.characterId)
 }

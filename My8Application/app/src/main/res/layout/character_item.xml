@@ -4,12 +4,15 @@
     <data>
         <variable name="character"
                   type="com.example.my8application.database.OnePieceCharacter"/>
+
+        <variable name="clickListener" type="com.example.my8application.characters.OnePieceCharacterListener"/>
     </data>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:orientation="vertical"
             android:id="@+id/character_card"
+            android:onClick="@{() -> clickListener.onClick(character)}"
             android:layout_width="match_parent"
             android:layout_marginBottom="16dp"
             android:layout_height="wrap_content">
