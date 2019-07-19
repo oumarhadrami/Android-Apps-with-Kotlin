@@ -38,6 +38,9 @@ class InsertFragmentFragment : Fragment() {
             it.findNavController().navigate(InsertFragmentFragmentDirections.actionInsertFragmentFragmentToCharactersFragment())
         }
 
+        binding.goToCharacters.setOnClickListener {
+            it.findNavController().navigate(InsertFragmentFragmentDirections.actionInsertFragmentFragmentToCharactersFragment())
+        }
 
         return binding.root
     }

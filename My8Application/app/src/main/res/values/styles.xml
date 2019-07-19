@@ -25,7 +25,7 @@
     </style>
 
     <style name="AppTitle" parent="AppTheme">
-        <item name="colorOnPrimary">@android:color/darker_gray</item>
+        <item name="colorOnPrimary">@color/primaryTextColor</item>
     </style>
 
 </resources>
