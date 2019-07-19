@@ -1,14 +1,13 @@
 package com.example.my8application.characters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.my8application.R
 import com.example.my8application.database.OnePieceCharacter
+import com.example.my8application.databinding.CharacterItemBinding
 
 class CharactersAdapter : ListAdapter<OnePieceCharacter,
         CharactersAdapter.ViewHolder>(CharactersDiffCallback()) {
@@ -27,20 +26,20 @@ class CharactersAdapter : ListAdapter<OnePieceCharacter,
 
 
 
-    class ViewHolder private constructor (itemView: View) : RecyclerView.ViewHolder(itemView){
+    class ViewHolder private constructor (val binding: CharacterItemBinding) : RecyclerView.ViewHolder(binding.root){
 
         fun bind(item: OnePieceCharacter) {
-            val res = itemView.context.resources
+          binding.textView3.text = item.characterName
+          binding.textView2.text = item.devilFruitType
 
         }
 
         companion object {
             fun from(parent: ViewGroup): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val view = layoutInflater
-                    .inflate(R.layout.character_item, parent, false)
+                val binding = CharacterItemBinding.inflate(layoutInflater, parent, false)
 
-                return ViewHolder(view)
+                return ViewHolder(binding)
             }
         }
 
