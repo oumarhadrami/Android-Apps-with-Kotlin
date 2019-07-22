@@ -36,12 +36,11 @@ class CharactersFragment : Fragment() {
         binding.lifecycleOwner =this
 
 
-
+        // RecyclerViewAdapter setup
         val adapter = CharactersAdapter(OnePieceCharacterListener { characterId ->
             Toast.makeText(context, "${characterId}", Toast.LENGTH_SHORT).show()
         })
         binding.charactersList.adapter = adapter
-
         viewModel.characters.observe(viewLifecycleOwner, Observer {
             it?.let {
                 adapter.submitList(it)
