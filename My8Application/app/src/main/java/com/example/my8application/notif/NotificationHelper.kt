@@ -22,13 +22,37 @@ import java.util.Random
 @RequiresApi(Build.VERSION_CODES.O)
 internal class NotificationHelper (context: Context) : ContextWrapper(context) {
 
+
+
+    /**
+     * Get the small icon for this app
+
+     * @return The small icon resource id
+     */
+    private val smallIcon: Int
+        get() = android.R.drawable.stat_notify_chat
+
+
+
+
+
+    // Initialize the channel
     companion object {
         const val INSERT_CHANNEL = "insert"
     }
 
+
+
+
+    // Initialize the notificationManager
     private val mNotificationManager: NotificationManager by lazy {
         getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
     }
+
+
+
+
+
 
     /**
      * Registers notification channels, which can be used later by individual notifications.
@@ -58,7 +82,7 @@ internal class NotificationHelper (context: Context) : ContextWrapper(context) {
 
     // get the insert notification
     fun getNotificationInsert(title: String, body: String): Notification.Builder {
-        return Notification.Builder(applicationContext)
+        return Notification.Builder(applicationContext, INSERT_CHANNEL)
             .setContentTitle(title)
             .setContentText(body)
             .setSmallIcon(smallIcon)
@@ -112,35 +136,6 @@ internal class NotificationHelper (context: Context) : ContextWrapper(context) {
     fun notify(id: Int, notification: Notification.Builder) {
         mNotificationManager.notify(id, notification.build())
     }
-
-
-
-
-
-
-
-
-
-
-    /**
-     * Get the small icon for this app
-
-     * @return The small icon resource id
-     */
-    private val smallIcon: Int
-        get() = android.R.drawable.stat_notify_chat
-
-
-    /**
-     * Get a random name string from resources to add personalization to the notification
-
-     * @return A random name
-     */
-    val randomName: String
-        get() {
-            var names = applicationContext.resources.getStringArray(R.array.names_array)
-            return names[Random().nextInt(names.size)]
-        }
 
 
 }

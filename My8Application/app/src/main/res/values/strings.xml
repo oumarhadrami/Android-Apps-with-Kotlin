@@ -17,6 +17,8 @@
 
 
     <string name="notification_channel_followers">Insert Notification Channel</string>
+    <string name="insert_title_notification">Insert</string>
+    <string name="insert_body_notification">You can insert as many characters as you want !</string>
 
 
     <string-array name="names_array">
