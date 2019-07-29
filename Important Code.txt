@@ -45,4 +45,31 @@
         return navController.navigateUp()
     	}
 
-// 
+// add color to navigation bar
+	<item name="android:navigationBarColor">@color/primary_dark</item>
+
+// Splash Activity
+	// in styles
+  		<style name="Fullscreen" parent="Theme.AppCompat.Light.DarkActionBar">
+    		<item name="windowActionBar">false</item>
+    		<item name="windowNoTitle">true</item>
+    		<item name="android:windowFullscreen">true</item>
+  		</style>
+	// in splashActivity.kt
+		class SplashActivity : AppCompatActivity() {
+    		override fun onCreate(savedInstanceState: Bundle?) {
+        	super.onCreate(savedInstanceState)
+        	setContentView(R.layout.activity_splash)
+        	thread {
+            	Thread.sleep((3 * 1000).toLong())
+            	startMainActivity()
+        	}.priority = Thread.NORM_PRIORITY
+    		}
+    		private fun startMainActivity() {
+        	val intent = Intent(applicationContext, MainActivity::class.java)
+        	startActivity(intent)
+        	finish()
+    		}
+		}
+	
+
