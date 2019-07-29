@@ -4,16 +4,25 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.raywenderlich.android.travelwishlist.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
 
     lateinit private var menu: Menu
     private var isListView: Boolean = false
+    private lateinit var staggeredGridLayoutManager: StaggeredGridLayoutManager
+    private lateinit var binding : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+        staggeredGridLayoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
+        list.layoutManager = staggeredGridLayoutManager
 
         isListView = true
     }
