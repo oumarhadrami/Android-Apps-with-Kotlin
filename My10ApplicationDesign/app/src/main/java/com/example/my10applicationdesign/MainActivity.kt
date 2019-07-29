@@ -16,6 +16,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         setSupportActionBar(toolbar)
+
+
+
+        fab.setOnClickListener {
+            revealEditText()
+        }
+
+    }
+
+    private fun revealEditText() {
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
