@@ -22,10 +22,14 @@
 	binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
 
+
+
 // Navigate from menu to fragment
 	R.id.aboutFragment -> {
                 navController.navigate(R.id.aboutFragment)
                 true}
+
+
 
 //Navigate from Fragment to another Fragment
 	
@@ -37,6 +41,8 @@
 
 	navController = Navigation.findNavController(this, R.id.myNavHostFragment)
 
+
+
 // Up button
 	NavigationUI.setupActionBarWithNavController(this, navController)
 	
@@ -47,6 +53,8 @@
 
 // add color to navigation bar
 	<item name="android:navigationBarColor">@color/primary_dark</item>
+
+
 
 // Splash Activity
 	// in styles
@@ -71,5 +79,13 @@
         	finish()
     		}
 		}
+	// in manifest.xml
+	 <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+         </intent-filter>
 	
+
+
+// 
 
