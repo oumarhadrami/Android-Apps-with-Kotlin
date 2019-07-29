@@ -11,6 +11,7 @@ import com.example.my10applicationdesign.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    var isEditTextVisible : Boolean = false
     private lateinit var binding : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,9 +21,15 @@ class MainActivity : AppCompatActivity() {
 
 
         fab.setOnClickListener {
-            revealEditText()
+            if (isEditTextVisible)
+                hideEditText()
+            else
+                revealEditText()
         }
 
+    }
+
+    private fun hideEditText() {
     }
 
     private fun revealEditText() {
