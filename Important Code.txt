@@ -22,6 +22,10 @@
 	binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
 
+// setUpNavigation
+	private lateinit var navController : NavController
+
+	navController = Navigation.findNavController(this, R.id.myNavHostFragment)
 
 
 // Navigate from menu to fragment
@@ -46,12 +50,6 @@
 binding.button.setOnClickListener {
             startActivity(Intent(this, Main2Activity::class.java))
         }
-
-
-// setUpNavigation
-	private lateinit var navController : NavController
-
-	navController = Navigation.findNavController(this, R.id.myNavHostFragment)
 
 
 
@@ -101,18 +99,4 @@ binding.button.setOnClickListener {
 
 // Add snackbar
 	Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show()
-
-
-// Add animation for navigation in code
-	val options = navOptions {
-            anim {
-                enter = R.anim.slide_in_right
-                exit = R.anim.slide_out_left
-                popEnter = R.anim.slide_in_left
-                popExit = R.anim.slide_out_right
-            }
-        }
-        binding.button.setOnClickListener {
-            it.findNavController().navigate(R.id.stepOneFragment, null, options)
-        }
 
