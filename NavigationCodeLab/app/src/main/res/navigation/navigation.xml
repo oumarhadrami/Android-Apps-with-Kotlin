@@ -25,4 +25,8 @@
               tools:layout="@layout/activity_main2"
               android:name="com.example.navigationcodelab.Main2Activity"
               android:label="Main2Activity"/>
+    <activity android:id="@+id/mainActivity"
+              tools:layout="@layout/activity_main"
+              android:name="com.example.navigationcodelab.MainActivity"
+              android:label="MainActivity"/>
 </navigation>
