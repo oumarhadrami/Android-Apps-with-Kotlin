@@ -6,7 +6,9 @@
     <fragment android:id="@+id/homeFragment"
               tools:layout="@layout/fragment_home"
               android:name="com.example.navigationcodelab.HomeFragment"
-              android:label="HomeFragment"/>
+              android:label="HomeFragment">
+        <action android:id="@+id/action_homeFragment_to_main2Activity" app:destination="@id/main2Activity"/>
+    </fragment>
     <fragment android:id="@+id/stepOneFragment"
               tools:layout="@layout/fragment_step_one"
               android:name="com.example.navigationcodelab.StepOneFragment"
@@ -19,4 +21,8 @@
               android:label="StepTwoFragment">
         <action android:id="@+id/action_stepTwoFragment_to_homeFragment" app:destination="@id/homeFragment"/>
     </fragment>
+    <activity android:id="@+id/main2Activity"
+              tools:layout="@layout/activity_main2"
+              android:name="com.example.navigationcodelab.Main2Activity"
+              android:label="Main2Activity"/>
 </navigation>

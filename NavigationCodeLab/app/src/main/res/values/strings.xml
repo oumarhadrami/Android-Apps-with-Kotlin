@@ -10,4 +10,6 @@
     <string name="finish_flow">Finish Flow</string>
     <string name="step_two">Step Two</string>
     <string name="main2_activity">Main2 Activity</string>
+    <string name="navigate_to_main2">Navigate to Main2</string>
+    <string name="main2_home_fragment">Main2 Home Fragment</string>
 </resources>
