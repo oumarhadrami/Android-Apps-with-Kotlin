@@ -13,7 +13,9 @@
               tools:layout="@layout/fragment_step_one"
               android:name="com.example.navigationcodelab.StepOneFragment"
               android:label="StepOneFragment">
-        <action android:id="@+id/action_stepOneFragment_to_stepTwoFragment" app:destination="@id/stepTwoFragment"/>
+        <action android:id="@+id/action_stepOneFragment_to_stepTwoFragment" app:destination="@id/stepTwoFragment"
+                app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment android:id="@+id/stepTwoFragment"
               tools:layout="@layout/fragment_step_two"
