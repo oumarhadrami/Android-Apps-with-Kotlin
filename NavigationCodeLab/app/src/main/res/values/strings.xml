@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Navigation Code Lab</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigate_to_destination">Navigate to Destination</string>
+    <string name="navigate_with_actions">Navigate with Actions</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="navigate_next_step">Navigate Next Step</string>
+    <string name="step_one">Step One</string>
+    <string name="finish_flow">Finish Flow</string>
+    <string name="step_two">Step Two</string>
+    <string name="main2_actvity">Main2 Activity</string>
 </resources>
