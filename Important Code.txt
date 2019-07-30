@@ -32,9 +32,21 @@
 
 
 //Navigate from Fragment to another Fragment
-	
 	it.findNavController().navigate(
                 FirstFragmentDirections.actionFirstFragmentToSecondFragment())
+
+
+// Navigate from Fragment to Activity (put an arrow from fragment to activity in navigation graph)
+	binding.textView.setOnClickListener{
+           it.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToMain2Activity())
+        }
+
+// Navigate from activity to another
+
+binding.button.setOnClickListener {
+            startActivity(Intent(this, Main2Activity::class.java))
+        }
+
 
 // setUpNavigation
 	private lateinit var navController : NavController

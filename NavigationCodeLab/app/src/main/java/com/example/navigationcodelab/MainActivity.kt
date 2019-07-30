@@ -17,7 +17,9 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
         binding.navToMain2.setOnClickListener {
-            startActivity(Intent(this, Main2Activity::class.java))
+            val intent : Intent = Intent(this, Main2Activity::class.java)
+                                        .putExtra("isLoggedIn",false)
+            startActivity(Intent(intent))
         }
     }
 }
