@@ -8,6 +8,7 @@ import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.example.practicerandom.ui.main.SectionsPagerAdapter
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +26,13 @@ class MainActivity : AppCompatActivity() {
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
+            showSomeToast()
+
+
         }
+    }
+
+    private fun showSomeToast() {
+        Toast.makeText(this, "Hi", Toast.LENGTH_SHORT).show()
     }
 }
