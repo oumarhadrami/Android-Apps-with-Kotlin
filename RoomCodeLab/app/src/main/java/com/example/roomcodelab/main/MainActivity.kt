@@ -1,7 +1,8 @@
-package com.example.roomcodelab
+package com.example.roomcodelab.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.roomcodelab.R
 
 class MainActivity : AppCompatActivity() {
 
