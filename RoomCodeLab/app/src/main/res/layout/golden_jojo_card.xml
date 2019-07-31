@@ -1,46 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                   android:layout_width="match_parent"
-                                   android:layout_height="120dp" xmlns:tools="http://schemas.android.com/tools"
-                                   app:cardElevation="15dp" android:layout_margin="12dp"
-                                   android:id="@+id/jojo_card" app:cardCornerRadius="25dp"
-                                   app:cardPreventCornerOverlap="false">
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="character"
+                  type="com.example.roomcodelab.database.GoldenJojo"/>
+
+        <variable name="clickListener" type="com.example.roomcodelab.main.GoldenJojoCharacterListener"/>
+    </data>
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_margin="10dp"
-            android:layout_height="match_parent">
-
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                  app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-                  app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                  app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
-                  android:id="@+id/char_name" app:layout_constraintHorizontal_bias="0.5"
-                  app:layout_constraintBottom_toTopOf="@+id/stand_name"
-                  tools:text="char Name"
-                  style="@style/textViewStyle"/>
-
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                  app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-                  app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                  android:layout_marginTop="8dp"
-                  style="@style/textViewStyle"
-                  tools:text="stand Name"
-                  android:id="@+id/stand_name" app:layout_constraintTop_toBottomOf="@+id/char_name"
-                  app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/stand_type"/>
+            android:layout_height="120dp"
+            app:cardElevation="15dp" android:layout_margin="12dp"
+            android:id="@+id/jojo_card" app:cardCornerRadius="25dp"
+            app:cardPreventCornerOverlap="false">
 
 
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                  app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-                  app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                  android:layout_marginTop="8dp"
-                  style="@style/textViewStyle"
-                  tools:text="stand Type"
-                  android:id="@+id/stand_type" app:layout_constraintBottom_toBottomOf="parent"
-                  app:layout_constraintTop_toBottomOf="@+id/stand_name" app:layout_constraintHorizontal_bias="0.5"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:layout_height="match_parent">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                      app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                      app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
+                      android:id="@+id/char_name" app:layout_constraintHorizontal_bias="0.5"
+                      app:layout_constraintBottom_toTopOf="@+id/stand_name"
+                      tools:text="char Name"
+                      style="@style/textViewStyle"/>
 
-</androidx.cardview.widget.CardView>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                      app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                      android:layout_marginTop="8dp"
+                      style="@style/textViewStyle"
+                      tools:text="stand Name"
+                      android:id="@+id/stand_name" app:layout_constraintTop_toBottomOf="@+id/char_name"
+                      app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/stand_type"/>
+
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                      app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                      android:layout_marginTop="8dp"
+                      style="@style/textViewStyle"
+                      tools:text="stand Type"
+                      android:id="@+id/stand_type" app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/stand_name" app:layout_constraintHorizontal_bias="0.5"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

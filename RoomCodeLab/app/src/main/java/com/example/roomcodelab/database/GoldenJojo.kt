@@ -11,11 +11,11 @@ data class GoldenJojo(
     val id : Long,
 
     @ColumnInfo(name = "character_name")
-    val charName : String,
+    var charName : String,
 
     @ColumnInfo(name = "stand_name")
-    val standName : String,
+    var standName : String,
 
     @ColumnInfo(name = "stand_type")
-    val standType : String
+    var standType : String
     )

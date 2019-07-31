@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">RoomCodeLab</string>
+    <string name="enter_name">enter name..</string>
+    <string name="enter_stand">enter stand..</string>
+    <string name="enter_stand_type">enter stand type..</string>
+    <string name="insert">Insert</string>
 </resources>
