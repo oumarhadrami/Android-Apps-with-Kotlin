@@ -19,16 +19,12 @@ class GoldenJojoRepository(private val dao: GoldenJojoDao) {
     }
 
     @WorkerThread
-    suspend fun delete(goldenJojo: GoldenJojo){
-        dao.delete(goldenJojo)
-    }
-
-    @WorkerThread
     suspend fun clearAll(){
         dao.clearAll()
     }
 
-
-
-
+    @WorkerThread
+    suspend fun delete(goldenJojo: GoldenJojo){
+        dao.delete(goldenJojo)
+    }
 }

@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         binding.lifecycleOwner =this
 
 
-
+        // recyclerview adapter init
         val adapter = CharactersAdapter()
         binding.charactersList.adapter = adapter
         viewModel.allCharaters.observe(this, Observer {
@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        // Insert a new character
         binding.insert.setOnClickListener {
             val charName = binding.insertName.text.toString()
             val newCharacter = GoldenJojo(charName = charName)
@@ -43,18 +44,17 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        //Update an existing character with id 4
         binding.update.setOnClickListener {
             val charName = binding.insertName.text.toString()
-            val newCharacter = GoldenJojo(charName = charName)
+            val newCharacter = GoldenJojo(id = 4, charName = charName)
             viewModel.update(newCharacter)
         }
 
 
+        // clear the database
         binding.clear.setOnClickListener {
             viewModel.clearAll()
         }
-
-
     }
-
 }

@@ -33,6 +33,4 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun update(newCharacter: GoldenJojo) = viewModelScope.launch {
         repo.update(newCharacter)
     }
-
-
 }

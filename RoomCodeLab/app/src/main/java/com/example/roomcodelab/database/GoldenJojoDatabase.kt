@@ -15,7 +15,6 @@ abstract class GoldenJojoDatabase : RoomDatabase(){
 
         @Volatile
         private var INSTANCE : GoldenJojoDatabase? = null
-
         fun getDatabase(context: Context) : GoldenJojoDatabase{
             return INSTANCE ?: synchronized(this){
                 val instance = Room.databaseBuilder(context.applicationContext,
