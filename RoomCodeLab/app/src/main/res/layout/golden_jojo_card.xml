@@ -13,6 +13,7 @@
     <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="120dp"
+            android:onClick="@{() -> clickListener.onClick(character)}"
             app:cardElevation="15dp" android:layout_margin="12dp"
             android:id="@+id/jojo_card" app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="false">
@@ -29,6 +30,9 @@
                       app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
                       android:id="@+id/char_name" app:layout_constraintHorizontal_bias="0.5"
                       app:layout_constraintBottom_toTopOf="@+id/stand_name"
+
+                      app:characterName="@{character}"
+
                       tools:text="char Name"
                       style="@style/textViewStyle"/>
 
@@ -38,6 +42,7 @@
                       android:layout_marginTop="8dp"
                       style="@style/textViewStyle"
                       tools:text="stand Name"
+                      app:standName="@{character}"
                       android:id="@+id/stand_name" app:layout_constraintTop_toBottomOf="@+id/char_name"
                       app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/stand_type"/>
 
@@ -48,6 +53,7 @@
                       android:layout_marginTop="8dp"
                       style="@style/textViewStyle"
                       tools:text="stand Type"
+                      app:standType="@{character}"
                       android:id="@+id/stand_type" app:layout_constraintBottom_toBottomOf="parent"
                       app:layout_constraintTop_toBottomOf="@+id/stand_name" app:layout_constraintHorizontal_bias="0.5"/>
 

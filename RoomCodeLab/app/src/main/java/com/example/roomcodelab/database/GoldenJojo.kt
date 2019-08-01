@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class GoldenJojo(
 
     @PrimaryKey(autoGenerate = true)
-    val id : Long,
+    var id : Long = 0L,
 
     @ColumnInfo(name = "character_name")
     var charName : String,
