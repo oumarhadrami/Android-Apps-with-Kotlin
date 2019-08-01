@@ -13,7 +13,7 @@ interface GoldenJojoDao {
     suspend fun update(goldenJojo: GoldenJojo)
 
     @Query("delete from jojos")
-    fun clearAll()
+    suspend fun clearAll()
 
     @Delete
     suspend fun delete(goldenJojo: GoldenJojo)

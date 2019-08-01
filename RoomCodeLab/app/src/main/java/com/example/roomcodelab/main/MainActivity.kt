@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         //Update an existing character with id 4
         binding.update.setOnClickListener {
             val charName = binding.insertName.text.toString()
-            val newCharacter = GoldenJojo(id = 4, charName = charName)
+            val newCharacter = GoldenJojo(id = 2, charName = charName)
             viewModel.update(newCharacter)
         }
 
