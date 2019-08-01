@@ -37,12 +37,12 @@ class MainActivity : AppCompatActivity() {
 
         binding.button3.setOnClickListener {
             val charName = binding.insertName.text.toString()
-            val standName = binding.insertStandname.text.toString()
-            val standType = binding.insertStandtype.text.toString()
-            val newCharacter = GoldenJojo(charName = charName, standName = standName, standType = standType)
+            val newCharacter = GoldenJojo(charName = charName)
             viewModel.insert(newCharacter)
 
         }
+
+
 
     }
 

@@ -11,11 +11,5 @@ data class GoldenJojo(
     var id : Long = 0L,
 
     @ColumnInfo(name = "character_name")
-    var charName : String,
-
-    @ColumnInfo(name = "stand_name")
-    var standName : String,
-
-    @ColumnInfo(name = "stand_type")
-    var standType : String
+    var charName : String
     )

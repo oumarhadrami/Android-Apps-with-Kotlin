@@ -12,7 +12,7 @@
 
     <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="wrap_content"
             android:onClick="@{() -> clickListener.onClick(character)}"
             app:cardElevation="15dp" android:layout_margin="12dp"
             android:id="@+id/jojo_card" app:cardCornerRadius="25dp"
@@ -25,37 +25,17 @@
                 android:layout_height="match_parent">
 
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                      app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-                      app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                      app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
-                      android:id="@+id/char_name" app:layout_constraintHorizontal_bias="0.5"
-                      app:layout_constraintBottom_toTopOf="@+id/stand_name"
+                      android:id="@+id/char_name"
 
                       app:characterName="@{character}"
 
                       tools:text="char Name"
-                      style="@style/textViewStyle"/>
+                      style="@style/textViewStyle" app:layout_constraintEnd_toEndOf="parent"
+                      android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                      android:layout_marginStart="8dp" app:layout_constraintTop_toTopOf="parent"
+                      android:layout_marginTop="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                      android:layout_marginBottom="8dp"/>
 
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                      app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-                      app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                      android:layout_marginTop="8dp"
-                      style="@style/textViewStyle"
-                      tools:text="stand Name"
-                      app:standName="@{character}"
-                      android:id="@+id/stand_name" app:layout_constraintTop_toBottomOf="@+id/char_name"
-                      app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/stand_type"/>
-
-
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                      app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-                      app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                      android:layout_marginTop="8dp"
-                      style="@style/textViewStyle"
-                      tools:text="stand Type"
-                      app:standType="@{character}"
-                      android:id="@+id/stand_type" app:layout_constraintBottom_toBottomOf="parent"
-                      app:layout_constraintTop_toBottomOf="@+id/stand_name" app:layout_constraintHorizontal_bias="0.5"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

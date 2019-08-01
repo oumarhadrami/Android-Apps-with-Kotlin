@@ -25,4 +25,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun insert(goldenJojo: GoldenJojo) = viewModelScope.launch {
         repo.insert(goldenJojo)
     }
+
+    fun clearAll() = viewModelScope.launch {
+        repo.clearAll()
+    }
 }

@@ -21,6 +21,7 @@ abstract class GoldenJojoDatabase : RoomDatabase(){
                 val instance = Room.databaseBuilder(context.applicationContext,
                     GoldenJojoDatabase::class.java,
                     "golden_jojos_database")
+                    .fallbackToDestructiveMigration()
                     .build()
                 INSTANCE = instance
                 instance

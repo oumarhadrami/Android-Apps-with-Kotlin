@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 class GoldenJojoRepository(private val dao: GoldenJojoDao) {
 
     val allCharacters : LiveData<List<GoldenJojo>> = dao.getAll()
-    val charWithSimilarStandTypes : LiveData<List<GoldenJojo>> = dao.getCharactersWithSimilarStandType("power")
+    val charWithSimilarNames : LiveData<List<GoldenJojo>> = dao.getCharactersWithSimilarNames("power")
 
     @WorkerThread
     suspend fun insert(goldenJojo: GoldenJojo){
@@ -21,6 +21,11 @@ class GoldenJojoRepository(private val dao: GoldenJojoDao) {
     @WorkerThread
     suspend fun delete(goldenJojo: GoldenJojo){
         dao.delete(goldenJojo)
+    }
+
+    @WorkerThread
+    suspend fun clearAll(){
+        dao.clearAll()
     }
 
 

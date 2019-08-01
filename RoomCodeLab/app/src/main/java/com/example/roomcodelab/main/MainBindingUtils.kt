@@ -11,19 +11,3 @@ fun TextView.setCharacterName(item : GoldenJojo?){
         text = item.charName
     }
 }
-
-
-@BindingAdapter("standName")
-fun TextView.setStandName(item : GoldenJojo?){
-    item?.let {
-        text = item.standName
-    }
-}
-
-
-@BindingAdapter("standType")
-fun TextView.setStandType(item : GoldenJojo?){
-    item?.let {
-        text = item.standType
-    }
-}
