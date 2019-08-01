@@ -36,7 +36,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"/>
 
             <Button
-                    android:text="@string/clear"
+                    android:text="@string/update"
                     android:elevation="8dp"
                     android:background="@color/primaryDarkColor"
                     android:fontFamily="@font/allerta"

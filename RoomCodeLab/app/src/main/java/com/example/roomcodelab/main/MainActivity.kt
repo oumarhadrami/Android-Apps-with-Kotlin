@@ -43,7 +43,11 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
+        binding.button4.setOnClickListener {
+            val charName = binding.insertName.text.toString()
+            val newCharacter = GoldenJojo(charName = charName)
+            viewModel.update(newCharacter)
+        }
     }
 
 }

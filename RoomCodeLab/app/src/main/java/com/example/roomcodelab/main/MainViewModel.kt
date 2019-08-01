@@ -29,4 +29,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun clearAll() = viewModelScope.launch {
         repo.clearAll()
     }
+
+    fun update(newCharacter: GoldenJojo) = viewModelScope.launch {
+        repo.update(newCharacter)
+    }
+
+
 }
