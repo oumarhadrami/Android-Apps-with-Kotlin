@@ -8,11 +8,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.roomcodelab.database.GoldenJojo
 import com.example.roomcodelab.databinding.GoldenJojoCardBinding
 
-class CharactersAdapter(val clickListener : GoldenJojoCharacterListener) : ListAdapter<GoldenJojo,
+class CharactersAdapter : ListAdapter<GoldenJojo,
         CharactersAdapter.ViewHolder>(CharactersDiffCallback()) {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(getItem(position), clickListener)
+        holder.bind(getItem(position))
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -25,12 +25,8 @@ class CharactersAdapter(val clickListener : GoldenJojoCharacterListener) : ListA
 
     class ViewHolder private constructor (val binding: GoldenJojoCardBinding) : RecyclerView.ViewHolder(binding.root){
 
-        fun bind(
-            item: GoldenJojo,
-            clickListener: GoldenJojoCharacterListener) {
-
+        fun bind(item: GoldenJojo) {
             binding.character = item
-            binding.clickListener = clickListener
             binding.executePendingBindings()
 
         }

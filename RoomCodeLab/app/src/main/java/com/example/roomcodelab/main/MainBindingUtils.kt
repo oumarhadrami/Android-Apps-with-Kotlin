@@ -8,7 +8,7 @@ import com.example.roomcodelab.database.GoldenJojo
 @BindingAdapter("characterName")
 fun TextView.setCharacterName(item : GoldenJojo?){
     item?.let {
-        setText(item.charName)
+        text = item.charName
     }
 }
 
@@ -16,7 +16,7 @@ fun TextView.setCharacterName(item : GoldenJojo?){
 @BindingAdapter("standName")
 fun TextView.setStandName(item : GoldenJojo?){
     item?.let {
-        setText(item.standName)
+        text = item.standName
     }
 }
 
@@ -24,6 +24,6 @@ fun TextView.setStandName(item : GoldenJojo?){
 @BindingAdapter("standType")
 fun TextView.setStandType(item : GoldenJojo?){
     item?.let {
-        setText(item.standType)
+        text = item.standType
     }
 }
