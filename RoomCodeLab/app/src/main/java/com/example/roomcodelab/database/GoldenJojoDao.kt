@@ -15,12 +15,13 @@ interface GoldenJojoDao {
     @Delete
     suspend fun delete(goldenJojo: GoldenJojo)
 
-    @Query("delete from jojos")
-    fun clearAll()
-
     @Query("select * from jojos order by character_name desc")
     fun getAll(): LiveData<List<GoldenJojo>>
 
     @Query("select * from jojos where character_name like :search")
     fun getCharactersWithSimilarNames(search : String) : LiveData<List<GoldenJojo>>
+
+    @Query("delete from jojos")
+    fun clearAll()
+
 }

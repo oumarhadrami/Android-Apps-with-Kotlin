@@ -4,6 +4,6 @@
     <string name="enter_stand">enter stand..</string>
     <string name="enter_stand_type">enter stand type..</string>
     <string name="insert">Insert</string>
-    <string name="clear">Clear</string>
     <string name="update">Update</string>
+    <string name="clear_all">Clear All</string>
 </resources>
