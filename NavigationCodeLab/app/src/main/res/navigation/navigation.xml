@@ -27,6 +27,7 @@
                 app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left"
                 app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right"/>
         <argument android:name="finish_message" app:argType="string"/>
+        <action android:id="@+id/action_stepTwoFragment_to_stepOneFragment" app:destination="@id/stepOneFragment"/>
     </fragment>
     <activity android:id="@+id/main2Activity"
               tools:layout="@layout/activity_main2"
