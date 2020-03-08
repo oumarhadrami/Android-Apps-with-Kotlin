@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         val viewModelFactory = MainViewModelFactory(application)
         val viewModel = ViewModelProviders.of(this, viewModelFactory).get(MainViewModel::class.java)
         binding.viewmodel = viewModel
-        binding.lifecycleOwner =this
 
 
         // recyclerview adapter init

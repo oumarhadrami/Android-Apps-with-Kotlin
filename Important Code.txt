@@ -90,6 +90,8 @@ binding.button.setOnClickListener {
     		}
 		}
 	// in manifest.xml
+	<activity android:name=".SplashActivity"
+        android:theme="@style/Fullscreen">
 	 <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -100,3 +102,83 @@ binding.button.setOnClickListener {
 // Add snackbar
 	Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show()
 
+
+
+//How to make recyclerview from database
+	- create database and table and store data
+	- create layout item (viewholder layout)
+	- create item dataclass
+	- create recyclerView in activity layout
+	- add layout manager to recyclerView
+	- create adapter for recyclerview
+	-sync recyclerview to adpater in activity class
+	- bindingUtils to add bindingAdapters
+	-use bindingAdapters in layout item
+	-binding.lifecycleOwner = this in activity class
+	-To observe data
+	sleepTrackerViewModel.nights.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                adapter.submitList(it)
+            }
+        })
+
+
+
+
+//Firestore RecyclerView
+	- create layout item (viewholder layout)
+	- create item dataclass
+	- create recyclerView in activity layout
+	- add layout manager to recyclerView
+	- firestore collection path 
+	- storage collection path
+	- bindingUtils to add bindingAdapters
+	-use bindingAdapters in layout item
+	-binding.lifecycleOwner = this
+	- create adapter for recyclerview
+	-sync recyclerview to adpater in activity class
+	- override fun onStart() {
+        super.onStart()
+        adapter.startListening()
+    	}
+    	-override fun onStop() {
+        super.onStop()
+        adapter.stopListening()
+    	}
+
+//Firestore to get fields value from firebase ref
+              FirestoreUtil.firestoreInstance
+              .document(""+args.ref)
+              .get()
+              .addOnSuccessListener {shopsNameText.text = it["shopName"].toString()}
+
+
+//change color of some text in a textview
+
+        val text = "Have an account? Login"
+        val ss = SpannableString(text)
+        val orangeLogin = ForegroundColorSpan(Color.parseColor("#0083b6"))
+        ss.setSpan(orangeLogin, 17,22, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        binding.loginButton.text = ss
+
+    
+
+//Handle the events of eddittext
+ //Make button clickable once 8 number have been registered
+        binding.phoneNumberLogin.addTextChangedListener(object: TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            }
+            override fun afterTextChanged(s: Editable?){
+                if(s.toString().length == 8) {
+                    binding.login.setBackgroundColor(Color.parseColor("#0083b6"))
+                    binding.login.setTextColor(Color.parseColor("#ffffff"))
+                }
+                else {
+                    binding.login.setBackgroundColor(Color.parseColor("#FF7C7979"))
+                    binding.login.setTextColor(Color.parseColor("#000000"))
+                }
+
+            }
+        })

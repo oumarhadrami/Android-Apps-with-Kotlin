@@ -1,5 +1,6 @@
 package com.example.locationcodelab
 
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
@@ -83,7 +84,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("sMissingPermission")
     private fun getLocation() {
-
+        fusedLocationProviderClient.lastLocation
+            .addOnSuccessListener { location : Location? ->
+                // Got last known location. In some rare situations this can be null.
+            }
     }
 }
